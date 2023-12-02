@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //    // ES5
+      //   function selam() {
+      //     console.log("hello");
+      //   }
+      //   selam();
+
+      //   var selamla = function () {
+      //     console.log("hello guys");
+      //   };
+
+      //   selamla();
+
+      // arrow function
+      //   var selamla = (isim) => {
+      //     console.log("merhaba" + isim);
+      //     console.log("simge");
+      //   };
+
+      //   selamla("simge");
+
+      //ES5
+      // var toplam = function (a, b) {
+      //   return a + b;
+      // };
+
+      // console.log(toplam(10, 12));
+
+      // //ES6
+
+      // var toplama = (a, b) => {
+      //   return a + b;
+      // };
+
+      // console.log(toplama(20, 4));
+
+      // const sayilar = [2, 3, 5, 6, 9, 7];
+
+      // const tekSayilar = [];
+      // for (let sayi of sayilar) {
+      //   if (sayi % 2 == 1) {
+      //     tekSayilar.push(sayi);
+      //   }
+      // }
+
+      // const tekSayiKontrol = (sayi) => sayi % 2 == 1;
+      // const tekSayilar = sayilar.filter(tekSayiKontrol);
+      // console.log(tekSayilar);
+
+      // const tekSayilar = sayilar.filter((sayi) => sayi % 2 == 1); // true değeri dönüyorsa filter fonksiyonu bu sayiyyi diziye ekler
+
+      // const tekSayilar = sayilar.map((sayi) => sayi % 2 == 1);
+      // console.log(tekSayilar);
+
+      // const urunler = [
+      //   { ÜrünAdi: "iphone", fiyati: "10000" },
+      //   { ÜrünAdi: "iphone 11", fiyati: "15000" },
+      //   { ÜrünAdi: "iphone 12", fiyati: "16000" },
+      //   { ÜrünAdi: "iphone 13", fiyati: "17000" },
+      // ];
+
+      // console.log(urunler);
+
+      // const sonuc = urunler.map((urun) => urun.ÜrünAdi);
+
+      // const sonuc = urunler
+      //   .filter((urun) => urun.fiyati > 15000)
+      //   .map((urun) => urun.ÜrünAdi);
+
+      // const sonuc = urunler.find((urun) => urun.fiyati > 12000); // ilk ürünü getirir bulduğu
+
+      // const sonuc = urunler.findIndex((urun) => urun.fiyati > 12000);
+
+      // console.log(sonuc);
+
+      // const mesaj = ["benim", "adım", "simge", "özkan"];
+
+      // let sonuc = "";
+      // for (let x of mesaj) {
+      //   sonuc += x + " ";
+      // }
+
+      // // console.log(sonuc);
+
+      // onsole.log(...mesaj);
+
+      // const dizi1 = ["bir", "iki"];
+      // const dizi2 = ["bir", "iki", "dört"];
+      // const dizi3 = [...dizi1, ...dizi2, "beş", "altı"];
+
+      // console.log(dizi3);
+
+      // const sayilar1 = [1, 2, 3];
+
+      // // const sayilar2 = sayilar1; // referans kopyalama
+
+      // const sayilar2 = [...sayilar1]; // value olarak kopyalama işlemi yapıldı
+
+      // sayilar1[0] = 10;
+
+      // console.log(sayilar1, sayilar2);
+
+      // const user = {
+      //   username: "simge",
+      //   mail: "z@hotmail.com",
+      // };
+
+      // const adres = {
+      //   username: "sss",
+      //   city: "istanbul",
+      // };
+
+      // console.log({ ...user, ...adres });
+
+      // // rest parameters
+
+      // function toplam(...args) {
+      //   let sonuc = 0;
+      //   for (let sayi of args) {
+      //     sonuc = sonuc + sayi;
+      //   }
+      //   return sonuc;
+      // }
+
+      // console.log(toplam(55, 3, 5));
+
+      // const ogrenciler = new Map();
+
+      // ogrenciler.set(1, "ali yılmaz");
+      // ogrenciler.set("55555555", "efeyılmaz");
+      // ogrenciler.set("1", "ali yılmaz");
+      // ogrenciler.set(true, "yılmaz");
+
+      // let sonuc;
+      // sonuc = ogrenciler.size;
+      // sonuc = ogrenciler.has(1);
+      // ogrenciler.delete(1);
+      // console.log(ogrenciler);
+      // console.log(sonuc);
+
+      // for (let x of ogrenciler.keys()) {
+      //   console.log(x);
+      // }
+
+      // for (let x of ogrenciler.values()) {
+      //   console.log(x);
+      // }
+
+      // for (let [key, value] of ogrenciler.entries()) {
+      //   console.log(key, value);
+      // }
+
+      //   let soru = {
+      //     key: "a",
+      //     value: "simge",
+      //     2: "b",
+      //     3: "c",
+      //   };
+
+      //   console.log(soru.key);
+
+      const sayilar = new Set([1, 2, 3]);
+      sayilar.add(4);
+      sayilar.add("4");
+      sayilar.add("4");
+
+      const dizi = [...sayilar];
+
+      sayilar.delete(2);
+      console.log(sayilar.has(2));
+      // sayilar.clear();
+      // console.log(sayilar);
+
+      // console.log(sayilar.values());
+
+      for (let x of sayilar) {
+        console.log(x);
+      }
+    </script>
+  </body>
+</html>

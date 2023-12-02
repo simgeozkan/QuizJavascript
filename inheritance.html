@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // temel Sınıf
+      class Kisi {
+        constructor(ad, dogumYili) {
+          console.log("kişi constructor çalıştı");
+          this.ad = ad;
+          this.dogumYili = dogumYili;
+        }
+
+        yasHesapla() {
+          let tarih = new Date().getFullYear();
+          return tarih - this.dogumYili;
+        }
+
+        kendiniTanıt() {
+          return `benim adım ${this.ad}`;
+        }
+      }
+
+      //child Sınıf
+
+      class Ogrenci extends Kisi {
+        constructor(ad, dogumYili, okulNumarasi) {
+          console.log("ogrenci constructor çalıştı");
+          super(ad, dogumYili); // burası kişi constructorı yeniden çalıştırır.
+          this.okulNumarasi = okulNumarasi;
+        }
+
+        dersCalis() {
+          console.log(`${this.ad} ders çalışıyor`);
+        }
+
+        kendiniTanıt() {
+          return `benim adım ${this.ad},okul numaramda var`;
+        }
+      }
+
+      let kisi = new Kisi("simge", 1988);
+      let ogrenci = new Ogrenci("simge", 1980, 203);
+
+      console.log(kisi);
+
+      console.log(kisi.yasHesapla());
+      console.log(ogrenci.yasHesapla());
+
+      ogrenci.dersCalis();
+      //   kisi.dersCalis(); // lişi sınıfı bu metodu kullanamaz.
+
+      console.log(ogrenci.kendiniTanıt());
+      console.log(kisi.kendiniTanıt());
+    </script>
+  </body>
+</html>
